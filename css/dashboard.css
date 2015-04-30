@@ -1,0 +1,193 @@
+/* Stylings for various elements of the dashboard */
+
+body
+{
+  margin: 0;
+  float: left;
+  position: relative;
+  min-width: 100%;
+  height: auto;
+  background: url("../images/menu_bg.jpg") repeat-y #fff !important;
+  color: #7D7D7D;
+}
+a
+{
+  color: #666;
+}
+#header,#nav_bar,.cell
+{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*
+*::-moz-selection
+{
+  color: #408c0b;
+  background: none;
+}
+*::selection
+{
+  color: #408c0b;
+  background: none;
+}
+*::-moz-selection:inactive
+{
+  color: #408c0b;
+  background: none;
+}
+*/
+.main_menu
+{
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.main_menu li.current
+{
+  background-image: url("../images/currentM.png") !important;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #111111;
+  border-top: 1px solid #000000;
+}
+.main_menu li:hover
+{
+  background-image: url("../images/foot.png");
+  color: #fff;
+  text-shadow: 0 2px 0 #000000;
+}
+.main_menu li:hover
+{
+  border-top: 1px solid #000000;
+}
+.main_menu li
+{
+  border-bottom: 1px solid #212123;
+  border-top: 1px solid #3f3f42;
+  display: block;
+  text-transform: capitalize;
+  width: 100%;
+}
+.main_menu li a
+{
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  padding: 17px 20px 17px 30px;
+  text-shadow: 0 2px 0 #000000;
+  transition: background-color 0.2s ease-out 0s;
+  text-decoration: none;
+}
+#nav_bar
+{
+  background: url("../images/menu_bg.jpg");
+  position: absolute;
+  top: 45px;
+  width: 200px;
+  z-index: 48;
+}
+#header
+{
+  background: url("../images/top_bgrepeat.jpg") repeat-x scroll 0 0 #000000;
+  box-shadow: 0 2px 15px #333333;
+  color: #fff;
+  height: 45px;
+  min-width: 768px;
+  width: 100%;
+  z-index: 47;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  line-height: 45px;
+}
+#header_text
+{
+  overflow: auto;
+  padding-left: 0;
+  color: #2398CD;
+}
+#account_info
+{
+  padding-right: 5px;
+  vertical-align: top;
+  float: right;
+  font-size: 0;
+}
+.infoTab
+{
+  font-size: 13px;
+  background: url("../images/accbg.png") no-repeat;
+  border-left: 1px solid #333333;
+  height: 45px;
+  padding: 0 15px;
+  cursor: default;
+  display: inline-block;
+  text-transform: capitalize;
+}
+.infoTab div
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+.infoTab a
+{
+  color: #999;
+}
+.fixer
+{
+  height: 45px;
+}
+#logout
+{
+  color: #d93e38;
+}
+#shadowhead
+{
+  background-image: url("../images/pick_bg.jpg");
+  background-repeat: repeat-x;
+  height: 58px;
+  position: absolute;
+  top: 45px;
+  left: 200px;
+  right: 0;
+  text-align: center;
+  color:#444;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 58px;
+  z-index: -5;
+}
+.dashIcon
+{
+  height: 32px;
+  width: 32px;
+  margin-right: 5px;
+}
+.dashIcon.usr
+{
+  background: url(../images/avatar.png);
+  background-size: contain;
+}
+.dashIcon.logout
+{
+  background: url(../images/logout.png) no-repeat center;
+}
+#content
+{
+  position: relative;
+  display: inline-block;
+  padding: 15px 5px 15px 15px;
+  white-space: nowrap;
+  margin-left: 200px;
+  margin-top: 60px;
+  position: relative;
+  height: 50%;
+}
+*
+{
+  white-space: normal;
+}

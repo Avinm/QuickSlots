@@ -1,0 +1,256 @@
+/* Generic styles for QuickSlots table grids */
+
+.tableContainer
+{
+  display:inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding-right: 255px;
+  margin-right: -255px;
+  width: 100%;
+  height: 100%;
+}
+div,span
+{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.table
+{
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 5px;
+  border-collapse: collapse;
+}
+.row
+{
+  display: table-row;
+}
+.cell
+{
+  display: table-cell;
+  position: relative;
+  height: 50px  ;
+  width: 120px;
+  color: #787878;
+  background: #fafafa padding-box;
+  border: 1px solid #A7A7A7  !important;
+  box-shadow: 0 0 25px #CDCDCD inset;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cell.disabled,.cell.blank
+{
+  background: #EAEAEA padding-box !important;
+  box-shadow: 0 0 20px #939393  inset !important;
+  color: #888888;
+}
+.cell.time
+{
+  font-size: 12px;
+  line-height: 13px;
+}
+.cell.day
+{
+  background:  rgba(235,249,163,0.9) padding-box !important;
+  box-shadow: 0 0 25px rgba(207,229,84,0.9) inset !important;
+  border: 1px solid rgba(169,201,0,0.9) !important;
+  color: #567D41;
+  width: 100px;
+}
+.cell.blue
+{
+  background: rgba(181,229,245,0.9) padding-box !important;
+  border: 1px solid rgba(64,173,210,0.9) !important;
+  box-shadow: 0 0 25px rgba(113,201,217,0.9) inset !important;
+  color: #2B7E99;
+}
+.course
+{
+  background: #ccc;
+  line-height: 45px;
+  margin: 0 auto 5px auto;
+  color: #4E4E4E;
+  font-weight: bold;
+  cursor: pointer;
+}
+.course > span
+{
+  vertical-align: middle;
+  display: inline-block;
+  line-height: normal;
+}
+.course_holder
+{
+  opacity: 1;
+  width: 100%;
+  color: #4E4E4E;
+}
+.course_container
+{
+  position:absolute;
+  bottom:0;
+  top:-1px;
+  left:-1px;
+  right:0
+}
+.selected span,td.selected
+{
+  text-decoration: underline;
+}
+span.conflict:before
+{
+  content: "~";
+  padding:0 3px;
+  display: inline-block;
+}
+.conflicting
+{
+  background-color: rgba(234, 26, 26, 0.23) !important;
+  box-shadow: 0 0 25px rgba(239, 9, 9, 0.57) inset !important;
+}
+#legend
+{
+  display: inline-block;
+  margin: 5px 0 0 15px;
+  font-weight: bold;
+  text-align: center;
+}
+#legend .title
+{
+  height: 41px;
+  padding: 10px 0 0 0;
+}
+#rightpane
+{
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  padding: 0;
+  text-align: center;
+}
+#courseScroll
+{
+  width: 220px;
+  display: inline-block;
+  z-index: 99999;
+  max-height: 270px;
+  overflow-y: auto; 
+}
+#conflict_info div,#conflict_info span
+{
+  display: inline-block;
+  text-align: left;
+  width: 60px;
+}
+#conflict_info
+{
+  font-weight: bold;
+  width: 100%;
+}
+#conflict_info span
+{
+  font-weight: normal;
+  vertical-align: top;
+  display: inline-block;
+  width:200px;
+}
+#course_info
+{
+  font-weight: bold;
+}
+#course_info th
+{
+  width: 70px;
+}
+table
+{
+  width: 100%;
+}
+table, th, td
+{
+  border: 1px solid #AAA;
+  padding: 0;
+  word-wrap: break-word;
+  border-collapse: collapse;
+}
+th
+{
+  font-size: 14px;
+  height: 20px;
+  color: #666;
+}
+td.course_name
+{
+  max-width: 79px;
+  color: #d93e38;
+}
+td.faculty
+{
+  max-width: 79px;
+  color: #469A14;
+}
+td.batch
+{
+  max-width: 99px;
+  color: #4F4EAD;
+}
+.course_name td
+{
+  color: #d93e38;
+}
+.fac_name td
+{
+  color: #469A14;
+}
+.room td
+{
+  color: #4F4EAD;
+}
+.batches td
+{
+  color: #888;
+}
+.faculty a,.faculty a:visited
+{
+  color:inherit;
+}
+.table.consolidated table
+{
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;  
+}
+table.course_holder tr:first-child td
+{
+  border-top: 0;
+}
+table.course_holder tr:last-child td
+{
+  border-bottom: 0;
+}
+table.course_holder td:first-child
+{
+  border-left: 0;
+}
+table.course_holder td:last-child
+{
+  border-right: 0;
+}
+table.course_holder td:last-child:nth-child(odd)
+{
+  border-right: 1px solid #aaa;
+}
+table.course_holder td:last-child:first-child
+{
+  border-right: none;
+}
