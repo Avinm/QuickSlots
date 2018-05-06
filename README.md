@@ -21,6 +21,21 @@
 * Support for LDAP authentication.
 
 --------------------------------------------------------------------------------
+    Screenshots
+--------------------------------------------------------------------------------
+User management:
+
+![Alt text](images/screenshot_users.png "User management")
+
+Slots Configuration:
+
+![Alt text](images/screenshot_slots.png "Slots Configuration")
+
+Timetable Allocation:
+
+![Alt text](images/screenshot_allocation.png "Timetable Allocation")
+
+--------------------------------------------------------------------------------
      Files and Descriptions
 --------------------------------------------------------------------------------
 
