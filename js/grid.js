@@ -41,19 +41,14 @@ function timeAdd(t,dur)
 {
     var hr = parseInt(t.substr(0,2),10),
         min = parseInt(t.substr(3,2),10),
-        mer = t.substr(-2),
-        h = Math.floor(dur/60);
-    min += dur - h*60;
-    hr +=h;
-    h = Math.floor(min/60);
-    hr +=h;
-    min -= h*60;
-    hr = (hr - 1) % 12 + 1;
-    if(hr>=12 && (h || dur>=60) )
-    {
+        mer = t.substr(-2);
+    min += dur;
+    new_hr = (hr + Math.floor(min/60)) % 12;
+    min %= 60;
+    if(new_hr < hr && hr!= 12)
         mer=(mer=="PM")?"AM":"PM";
-    }  
-    return ("0"+hr).substr(-2)+":"+("0"+min).substr(-2)+" "+mer;
+    new_hr = new_hr || 12;
+    return ("0"+new_hr).substr(-2)+":"+("0"+min).substr(-2)+" "+mer;
 }
 
 /**

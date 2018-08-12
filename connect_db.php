@@ -23,7 +23,8 @@ if(isset($config))
     {
       if(sessionCheck('level','dean'))
       {
-        $query = $db->prepare("INSERT IGNORE into timetables(table_name) VALUES(?)");
+        $active = 1 - $db->query("SELECT count(*) from timetables where active=1")->fetchColumn();
+        $query = $db->prepare("INSERT IGNORE into timetables(table_name, active) VALUES(?, $active)");
         $query->execute([$_GET['table']]);
       }
       $query = $db->prepare("SELECT * FROM timetables where table_name=?");
