@@ -10,8 +10,8 @@ if(!empty($_POST['filter']) && sessionCheck('logged_in'))
 {
   $imgPath = 'tmp/print_' . time() . '.png';
   $phantom = 'phantomjs' .DIRECTORY_SEPARATOR. 'phantomjs';
-  $basUrl = 'http://'.$_SERVER['SERVER_ADDR'].dirname($_SERVER['SCRIPT_NAME']);
-  $printUrl = escapeshellarg($basUrl .'/?print=true&'. $_POST['filter']); // Serious vulnerability if not escaped
+  $baseUrl = 'http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['SCRIPT_NAME']);
+  $printUrl = escapeshellarg($baseUrl .'/?print=true&'. $_POST['filter']); // Serious vulnerability if not escaped
   exec($phantom . ' js/capture.js ' . $printUrl . ' ' . $imgPath);
   header('Content-Disposition: attachment; filename='.$_POST['filename'].'.png');
   header('Content-Type: '.mime_content_type($imgPath));
